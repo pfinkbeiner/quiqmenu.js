@@ -2,8 +2,6 @@
 ========
 
 
-[Demo](quiqmenu.finkbeiner.me)
-
 
 ## Usage
 Setup Quiqmenu.js is really easy. Get the latest script from github and ensure you are using jQuery 1.3 or higher on your site.
