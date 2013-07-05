@@ -33,6 +33,7 @@ class QuiqMenu
   # Contains each selector.
   selector:
     base: undefined
+    container: '.container'
 
   # Slider default settings
   defaults:
@@ -101,7 +102,7 @@ class QuiqMenu
       if ((jQuery @).hasClass 'brand-top') is false
         (jQuery @).parent().addClass 'active'
         anchor = (jQuery @).attr 'href'
-        pos = ((jQuery '.container').find 'a[href="'+anchor+'"]').offset().top
+        pos = ((jQuery me.container).find 'a[href="'+anchor+'"]').offset().top
       me.scrollTo parseInt pos, 10
 
   # Scrolls to requested section

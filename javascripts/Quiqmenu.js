@@ -37,7 +37,8 @@
   QuiqMenu = (function() {
 
     QuiqMenu.prototype.selector = {
-      base: void 0
+      base: void 0,
+      container: '.container'
     };
 
     QuiqMenu.prototype.defaults = {
@@ -109,7 +110,7 @@
         if (((jQuery(this)).hasClass('brand-top')) === false) {
           (jQuery(this)).parent().addClass('active');
           anchor = (jQuery(this)).attr('href');
-          pos = ((jQuery('.container')).find('a[href="' + anchor + '"]')).offset().top;
+          pos = ((jQuery(me.container)).find('a[href="' + anchor + '"]')).offset().top;
         }
         return me.scrollTo(parseInt(pos, 10));
       });
